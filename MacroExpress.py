@@ -22,7 +22,7 @@ status = "no data"
 
 
 client = pygsheets.authorize(service_account_file='credentials.json') #Must have this in root directory
-GoogleSheetsURL = "https://docs.google.com/spreadsheets/d/1d1TgQVeTYTGplndFJyDYYDqH_0ep7mcLtrJbUvZPny0/edit?usp=sharing"
+GoogleSheetsURL = "URL"
 sheet = client.open_by_url(GoogleSheetsURL)
 try:
     wks = sheet.worksheet_by_title(wkstitle)
@@ -148,7 +148,7 @@ class Application(Frame):
 
 #========================== GUI Functions ==========================
         
-# The "Update row" button is tied to this function which creates the entry fields for weighted grades (grade and their associated percent value)
+# The "Update row" button is tied to this function
     def update(self):
         global row     
         row = self.getrow.get()
